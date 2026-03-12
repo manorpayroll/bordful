@@ -11,18 +11,33 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: [
-          'var(--font-geist-sans)',
           'var(--font-inter)',
+          'var(--font-geist-sans)',
           'system-ui',
           'sans-serif',
         ],
         serif: [
+          'var(--font-cormorant)',
           'var(--font-ibm-plex-serif)',
           'Georgia',
           'Times New Roman',
           'serif',
         ],
         mono: ['var(--font-geist-mono)', 'monospace'],
+      },
+      colors: {
+        brand: {
+          ivory: '#FAFAF7',
+          'warm-white': '#F5F3EE',
+          cream: '#EDE9E0',
+          gold: '#B8956A',
+          'gold-hover': '#A07D55',
+          charcoal: '#1A1A1A',
+          dark: '#2C2C2C',
+          medium: '#6B6B6B',
+          'light-text': '#9A9A9A',
+          border: '#E5E1D8',
+        },
       },
       container: {
         center: true,
