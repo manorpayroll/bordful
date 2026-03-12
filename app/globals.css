@@ -2,17 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/* âââ Cormorant Garamond â serif headlines for PrivateStaffJobs brand âââ */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
+
 @layer base {
   :root {
     --font-geist-sans: "Geist Sans";
     --font-geist-mono: "Geist Mono";
     --font-inter: "Inter";
     --font-ibm-plex-serif: "IBM Plex Serif";
+    --font-cormorant: "Cormorant Garamond";
   }
 
   /* Font styling for IBM Plex Serif */
   html[data-font="ibm-plex-serif"] {
     font-family: var(--font-ibm-plex-serif), Georgia, serif;
+  }
+
+  /* âââ PrivateStaffJobs Brand Overrides âââ */
+
+  /* Ivory page background */
+  body {
+    background-color: #FAFAF7 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Serif headlines â Cormorant Garamond on all major headings */
+  h1, h2, h3 {
+    font-family: "Cormorant Garamond", Georgia, serif !important;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  /* Hero headline â lighter weight, tighter leading */
+  h1 {
+    font-weight: 400;
+    line-height: 1.15;
   }
 }
 
@@ -115,4 +141,48 @@
 
 .pulse-dot {
   animation: pulse 2s infinite;
+}
+
+/* âââ PrivateStaffJobs Brand Polish âââ */
+
+/* Warm card borders */
+.rounded-lg,
+.rounded-xl {
+  border-color: #E5E1D8;
+}
+
+/* Gold accent for primary text */
+.text-primary {
+  color: #B8956A !important;
+}
+
+/* Featured badge â gold background */
+[data-featured],
+.bg-primary {
+  background-color: #B8956A !important;
+}
+
+/* Links â smooth transition */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Footer link hover â gold */
+footer a:hover {
+  color: #B8956A !important;
+}
+
+/* Scrollbar â subtle, warm (WebKit only) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAFAF7;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5E1D8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8956A;
 }
